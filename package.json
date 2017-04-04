@@ -1,17 +1,40 @@
 {
-    "buildNpmdoc":"xregexp",
+    "author": "kai zhu <kaizhu256@gmail.com>",
+    "buildNpmdoc": "xregexp",
+    "description": "api documentation for [xregexp (v3.1.1)](http://xregexp.com/) [![npm package](https://img.shields.io/npm/v/npmdoc-xregexp.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-xregexp) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-xregexp.svg)](https://travis-ci.org/npmdoc/node-npmdoc-xregexp)",
     "devDependencies": {
-        "xregexp": "*",
         "electron-lite": "kaizhu256/node-electron-lite#alpha",
-        "utility2": "kaizhu256/node-utility2#alpha"
+        "utility2": "kaizhu256/node-utility2#alpha",
+        "xregexp": "*"
     },
-    "name":"npmdoc-xregexp",
+    "engines": {
+        "node": ">=4.0"
+    },
+    "homepage": "https://github.com/npmdoc/node-npmdoc-xregexp",
+    "keywords": [
+        "documentation",
+        "xregexp"
+    ],
+    "license": "MIT",
+    "main": "lib.npmdoc_xregexp.js",
+    "name": "npmdoc-xregexp",
+    "nameAlias": "npmdoc_xregexp",
+    "nameOriginal": "npmdoc-xregexp",
+    "os": [
+        "darwin",
+        "linux"
+    ],
     "repository": {
         "type": "git",
         "url": "https://github.com/npmdoc/node-npmdoc-xregexp.git"
     },
     "scripts": {
-        "build-ci": "utility2 shReadmeTest build_ci.sh"
+        "build-ci": "utility2 shReadmeTest build_ci.sh",
+        "env": "env",
+        "heroku-postbuild": "(set -e; npm install \"kaizhu256/node-utility2#alpha\"; utility2 shDeployHeroku)",
+        "postinstall": "if [ -f npm_scripts.sh ]; then ./npm_scripts.sh postinstall; fi",
+        "start": "(set -e; export PORT=${PORT:-8080}; utility2 start test.js)",
+        "test": "(set -e; export PORT=$(utility2 shServerPortRandom); utility2 test test.js)"
     },
     "version": "0.0.1"
 }
