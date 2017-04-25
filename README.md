@@ -1,4 +1,7 @@
-# api documentation for  [xregexp (v3.2.0)](http://xregexp.com/)  [![npm package](https://img.shields.io/npm/v/npmdoc-xregexp.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-xregexp) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-xregexp.svg)](https://travis-ci.org/npmdoc/node-npmdoc-xregexp)
+# npmdoc-xregexp
+
+#### basic api documentation for  [xregexp (v3.2.0)](http://xregexp.com/)  [![npm package](https://img.shields.io/npm/v/npmdoc-xregexp.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-xregexp) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-xregexp.svg)](https://travis-ci.org/npmdoc/node-npmdoc-xregexp)
+
 #### Extended regular expressions
 
 [![NPM](https://nodei.co/npm/xregexp.png?downloads=true&downloadRank=true&stars=true)](https://www.npmjs.com/package/xregexp)
@@ -66,7 +69,8 @@
         "pretest": "npm run build",
         "test": "jasmine JASMINE_CONFIG_PATH=tests/jasmine.json"
     },
-    "version": "3.2.0"
+    "version": "3.2.0",
+    "bin": {}
 }
 ```
 
